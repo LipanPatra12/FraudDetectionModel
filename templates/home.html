@@ -1,3 +1,48 @@
-<h1>
-    hello world
-</h1>
+<html>
+    <body>
+        <form action="/predict" method="POST">
+            <!-- All positive decimal numbers up to 3 decimal places -->
+            <input type="number" step="0.001" min="0" name="Group" placeholder="Group" required>
+            <input type="number" step="0.001" min="0" name="per1" placeholder="per1" required>
+            <input type="number" step="0.001" min="0" name="per2" placeholder="per2" required>
+            <input type="number" step="0.001" min="0" name="per3" placeholder="per3" required>
+            <input type="number" step="0.001" min="0" name="per4" placeholder="per4" required>
+            <input type="number" step="0.001" min="0" name="per5" placeholder="per5" required>
+            <input type="number" step="0.001" min="0" name="per6" placeholder="per6" required>
+            <input type="number" step="0.001" min="0" name="per7" placeholder="per7" required>
+            <input type="number" step="0.001" min="0" name="per8" placeholder="per8" required>
+            <input type="number" step="0.001" min="0" name="per9" placeholder="per9" required>
+
+            <input type="number" step="0.001" min="0" name="dem1" placeholder="dem1" required>
+            <input type="number" step="0.001" min="0" name="dem2" placeholder="dem2" required>
+            <input type="number" step="0.001" min="0" name="dem3" placeholder="dem3" required>
+            <input type="number" step="0.001" min="0" name="dem4" placeholder="dem4" required>
+            <input type="number" step="0.001" min="0" name="dem5" placeholder="dem5" required>
+            <input type="number" step="0.001" min="0" name="dem6" placeholder="dem6" required>
+            <input type="number" step="0.001" min="0" name="dem7" placeholder="dem7" required>
+            <input type="number" step="0.001" min="0" name="dem8" placeholder="dem8" required>
+            <input type="number" step="0.001" min="0" name="dem9" placeholder="dem9" required>
+
+            <input type="number" step="0.001" min="0" name="cred1" placeholder="cred1" required>
+            <input type="number" step="0.001" min="0" name="cred2" placeholder="cred2" required>
+            <input type="number" step="0.001" min="0" name="cred3" placeholder="cred3" required>
+            <input type="number" step="0.001" min="0" name="cred4" placeholder="cred4" required>
+            <input type="number" step="0.001" min="0" name="cred5" placeholder="cred5" required>
+            <input type="number" step="0.001" min="0" name="cred6" placeholder="cred6" required>
+
+            <!-- Normalised_FNT allows negative decimal values -->
+            <input type="number" step="0.001" name="Normalised_FNT" placeholder="Normalised_FNT (negative allowed)" required>
+
+            <input type="number" step="0.001" min="0" name="lambda_wt" placeholder="lambda_wt" required>
+            <input type="number" step="0.001" min="0" name="instance_scores" placeholder="instance_scores" required>
+            <input type="number" step="0.001" min="0" name="qsets_normalized_tat" placeholder="qsets_normalized_tat" required>
+            <input type="number" step="0.001" min="0" name="geo_score" placeholder="geo_score" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if result %}
+            <h2>{{ result }}</h2>
+        {% endif %}
+    </body>
+</html>
