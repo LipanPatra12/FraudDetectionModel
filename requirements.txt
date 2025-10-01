@@ -1,7 +1,8 @@
 Flask
-pandas
-seaborn
+gunicorn==23.0.0
 matplotlib
-scikit-learn==1.0.2
 numpy
-gunicorn
+pandas
+scikit-learn
+seaborn
+
